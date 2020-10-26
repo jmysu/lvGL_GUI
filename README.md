@@ -2,9 +2,11 @@
 lvGL7.7 GUI stuff 
 
 ## lvGL GUI simulator for MAC OSX <br>
+remember update DYLD_LIBRARY_PATH with SDL2 lib for running...<br>
 <img src="pic/lvGL7_OSX.gif" width=640 /> &nbsp;&nbsp;&nbsp;<br><br>
 
-## lvGL GUI simulator for Window10 (Mingw64)
+## lvGL GUI simulator for Window10 (Mingw64) <br>
+remember update PATH with SDL2 lib for running...<br>
 <img src="pic/lvGL7.7_Win64.jpg" width=640 /> &nbsp;&nbsp;&nbsp;<br><br>
 
 
