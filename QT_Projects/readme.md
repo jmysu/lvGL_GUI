@@ -1,4 +1,4 @@
 
-lvGL simulator forked from https://github.com/lvgl/lv_sim_eclipse_sdl
+lvGL7.7 simulator forked from https://github.com/lvgl/lv_sim_eclipse_sdl
 with Windows10 and MacOSX updates! <br>
 
