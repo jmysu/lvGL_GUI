@@ -5,6 +5,7 @@ lvGL7.7 GUI stuff
 <img src="pic/lvGL7_OSX.gif"/> &nbsp;&nbsp;&nbsp;<br><br>
 
 ## lvGL GUI simulator for Window10 (Mingw64)
+<img src="pic/lvGL7.7_Win64.jpg"/> &nbsp;&nbsp;&nbsp;<br><br>
 
 
 ## References
