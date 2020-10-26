@@ -1,5 +1,6 @@
 # lvGL_GUI [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)<br>
-lvGL7.7 GUI stuff 
+lvGL7.7 GUI stuff, build and run on Windows10(mingw64) && MAC OSX<br>
+
 
 ## lvGL GUI simulator for MAC OSX <br>
 remember to update DYLD_LIBRARY_PATH with SDL2 lib for running app...<br>
