@@ -9,7 +9,7 @@ remember update DYLD_LIBRARY_PATH with SDL2 lib for running...<br>
 remember update PATH with SDL2 lib for running...<br>
 <img src="pic/lvGL7.7_Win64.jpg" width=640 /> &nbsp;&nbsp;&nbsp;<br><br>
 <img src="pic/lvGL7_Bench01.jpg" width=400 /> &nbsp;&nbsp;&nbsp;<img src="pic/lvGL7_Bench02.jpg" width=480 /> <br>
-<img src="pic/lvGL7_Printer.jpg" width=400 /> &nbsp;&nbsp;&nbsp;<img src="pic/lvGL7_Stress.jpg" width=480 /> <br><br>
+<img src="pic/lvGL7_Printer.jpg" width=400 /> &nbsp;&nbsp;&nbsp;<img src="pic/lvGL7_Stress.jpeg" width=480 /> <br><br>
 ## References
   - [libSDL](https://www.libsdl.org/) Simple DirectMedia Layer.
   - [lvGL](https://github.com/lvgl/lvgl)  Light and Versatile Graphics Library.
