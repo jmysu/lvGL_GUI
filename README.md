@@ -8,7 +8,7 @@ remember update DYLD_LIBRARY_PATH with SDL2 lib for running...<br>
 ## lvGL GUI simulator for Window10 (Mingw64) <br>
 remember update PATH with SDL2 lib for running...<br>
 <img src="pic/lvGL7.7_Win64.jpg" width=640 /> &nbsp;&nbsp;&nbsp;<br><br>
-
+<img src="pic/lvGL7_Bench01.jpg" width=480 /> &nbsp;&nbsp;&nbsp;<img src="pic/lvGL7_Bench02.jpg" width=480 /> &nbsp;&nbsp;&nbsp;<br><br>
 
 ## References
   - [libSDL](https://www.libsdl.org/) Simple DirectMedia Layer.
