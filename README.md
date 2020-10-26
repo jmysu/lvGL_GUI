@@ -16,4 +16,4 @@ remember to update PATH with SDL2 lib,bin for running app...<br>
 ## References
   - [libSDL](https://www.libsdl.org/) Simple DirectMedia Layer.
   - [lvGL](https://github.com/lvgl/lvgl)  Light and Versatile Graphics Library.
-
+  - [lvGL.io](https://lvgl.io/developers) lvGL Getting Startted.
