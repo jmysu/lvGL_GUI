@@ -15,7 +15,7 @@ remember to update PATH with SDL2 lib,bin for running app...<br>
 <img src="pic/lvGL7_Printer.jpg" width=320 /> &nbsp;&nbsp;&nbsp;<img src="pic/lvGL7_Stress.jpeg" width=480 /> <br><br>
 
 ## lvGL GUI for Wio Terminal (ATSAMD51P19 ) <br>
-remember to update PATH with SDL2 lib,bin for running app...<br>
+use TFT_eSPI LCD driver...<br>
 <img src="pic/lvGL7_WioTerminal.gif" width=640 /> &nbsp;&nbsp;&nbsp;<br><br>
 
 
