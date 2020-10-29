@@ -13,7 +13,14 @@ remember to update PATH with SDL2 lib,bin for running app...<br>
 <img src="pic/lvGL7.7_Win64.jpg" width=640 /> &nbsp;&nbsp;&nbsp;<br><br>
 <img src="pic/lvGL7_Bench01.jpg" width=320 /> &nbsp;&nbsp;&nbsp;<img src="pic/lvGL7_Bench02.jpg" width=480 /> <br>
 <img src="pic/lvGL7_Printer.jpg" width=320 /> &nbsp;&nbsp;&nbsp;<img src="pic/lvGL7_Stress.jpeg" width=480 /> <br><br>
+
+## lvGL GUI for Wio Terminal (ATSAMD51P19 ) <br>
+remember to update PATH with SDL2 lib,bin for running app...<br>
+<img src="pic/lvGL7_WioTerminal.gif" width=640 /> &nbsp;&nbsp;&nbsp;<br><br>
+
+
 ## References
   - [libSDL](https://www.libsdl.org/) Simple DirectMedia Layer.
   - [lvGL](https://github.com/lvgl/lvgl)  Light and Versatile Graphics Library.
   - [lvGL.io](https://lvgl.io/developers) lvGL Getting Startted.
+  - [lvGL WioTerminal](https://wiki.seeedstudio.com/Wio-Terminal-LVGL/) lvGL on Wio Terminal.
