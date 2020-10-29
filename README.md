@@ -16,7 +16,7 @@ remember to update PATH with SDL2 lib,bin for running app...<br>
 
 ## lvGL GUI for Wio Terminal (ATSAMD51P19 ) <br>
 __PlatformIO project__, use TFT_eSPI LCD driver, running lvGL7 benchmark...<br>
-<img src="pic/lvGL7_WioTerminal.gif" width=640 /> &nbsp;&nbsp;&nbsp;<br><br>
+<img src="pic/lvGL7_WioTerminal.gif" width=480 /> &nbsp;&nbsp;&nbsp;<br><br>
 
 
 ## References
