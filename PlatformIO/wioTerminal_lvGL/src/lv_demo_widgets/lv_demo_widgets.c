@@ -566,7 +566,6 @@ static void ta_event_cb(lv_obj_t * ta, lv_event_t e)
             lv_obj_set_height(tv, LV_VER_RES / 2);
             kb = lv_keyboard_create(lv_scr_act(), NULL);
             lv_obj_set_event_cb(kb, kb_event_cb);
-
             lv_indev_wait_release(lv_indev_get_act());
         }
         lv_textarea_set_cursor_hidden(ta, false);

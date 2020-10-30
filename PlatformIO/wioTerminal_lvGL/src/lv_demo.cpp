@@ -3,12 +3,14 @@
 #include <TFT_eSPI.h>
 #include "benchmark/lv_demo_benchmark.h"
 #include "lv_demo_widgets/lv_demo_widgets.h"
+#include "lv_input/lv_demo_keypad_encoder.h"
 
 #define LVGL_TICK_PERIOD 5
 
 TFT_eSPI tft = TFT_eSPI(); /* TFT instance */
 static lv_disp_buf_t disp_buf;
 static lv_color_t buf[LV_HOR_RES_MAX * 10];
+
 
 #if USE_LV_LOG != 0
 /* Serial debugging */
@@ -60,10 +62,86 @@ bool read_encoder(lv_indev_drv_t * indev, lv_indev_data_t * data)
   return false;
 }
 
+//
+//
+//
+uint32_t wioGet5WaySwitch()
+{
+uint32_t k=0;
 
+  if (digitalRead(WIO_5S_UP) == LOW) {
+    k=4; Serial.println("5 Way Up");
+    }
+  else if (digitalRead(WIO_5S_DOWN) == LOW) {
+    k=5; Serial.println("5 Way Down");
+    }
+  else if (digitalRead(WIO_5S_LEFT) == LOW) {
+    k=2; Serial.println("5 Way Left");
+    }
+  else if (digitalRead(WIO_5S_RIGHT) == LOW) {
+    k=3; Serial.println("5 Way Right");
+    }
+  else if (digitalRead(WIO_5S_PRESS) == LOW) {
+    k=1; Serial.println("5 Way Press");
+    }
+  return k;  
+}
+//
+//
+//
+static int32_t encoder_diff;
+static lv_indev_state_t encoder_state;
+static bool encoder_wio(lv_indev_drv_t * indev_drv, lv_indev_data_t * data)
+{
+    static uint32_t last_key = 0;
+    uint32_t act_key = wioGet5WaySwitch();
+    if(act_key != 0) {
+        switch(act_key) {
+        case 1:
+            act_key = LV_KEY_ENTER;
+            encoder_state = LV_INDEV_STATE_PR;	
+            break;
+        case 2:
+            act_key = LV_KEY_LEFT;
+            encoder_diff = -1;
+            encoder_state = LV_INDEV_STATE_REL;
+            break;
+        case 3:
+            act_key = LV_KEY_RIGHT;
+            encoder_state = LV_INDEV_STATE_REL;
+            encoder_diff = 1;
+            break;
+        }
+        last_key = act_key;
+    }
+    else {
+        encoder_diff = 0;
+        encoder_state = LV_INDEV_STATE_REL;
+    }
+    data->key = last_key;
+    data->enc_diff = encoder_diff;
+    data->state = encoder_state;
+    /*Return `false` because we are not buffering and no more data to read*/
+    return false;
+}
+
+static lv_group_t* g; //An Object Group
+static lv_indev_t* encoder_indev; //The input device
 void setup() {
 
   Serial.begin(115200); /* prepare for possible serial debug */
+
+  //setup 5-way switch--------------
+  pinMode(WIO_5S_UP, INPUT_PULLUP);
+  pinMode(WIO_5S_DOWN, INPUT_PULLUP);
+  pinMode(WIO_5S_LEFT, INPUT_PULLUP);
+  pinMode(WIO_5S_RIGHT, INPUT_PULLUP);
+  pinMode(WIO_5S_PRESS, INPUT_PULLUP);
+  //setup buttons------------------
+  pinMode(WIO_KEY_A, INPUT_PULLUP);
+  pinMode(WIO_KEY_B, INPUT_PULLUP);
+  pinMode(WIO_KEY_C, INPUT_PULLUP);
+  
 
   lv_init();
 
@@ -89,11 +167,18 @@ void setup() {
   lv_indev_drv_t indev_drv;
   lv_indev_drv_init(&indev_drv);
   indev_drv.type = LV_INDEV_TYPE_ENCODER;
-  indev_drv.read_cb = read_encoder;
-  lv_indev_drv_register(&indev_drv);
+  //indev_drv.read_cb = read_encoder;
+  indev_drv.read_cb = encoder_wio;
+  encoder_indev = lv_indev_drv_register(&indev_drv);
+
+  //Create Group for encoder
+  //g = lv_group_create();
+  //lv_indev_set_group(encoder_indev, g);
+  
   /*stress test*/
   //lv_demo_benchmark();
-  lv_demo_widgets();
+  //lv_demo_widgets();
+  lv_demo_keypad_encoder();
 }
 
 
